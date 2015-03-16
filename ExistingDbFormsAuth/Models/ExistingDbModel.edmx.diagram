@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2530088ee4e740a687010232b5a6a060" Name="Diagram1" >
+        <EntityTypeShape EntityType="IdentityExistingDbModel.Role" Width="1.5" PointX="0.75" PointY="2.5" />
+        <EntityTypeShape EntityType="IdentityExistingDbModel.User" Width="1.5" PointX="3" PointY="1.25" />
+        <EntityTypeShape EntityType="IdentityExistingDbModel.UserClaim" Width="1.5" PointX="5.25" PointY="1" />
+        <EntityTypeShape EntityType="IdentityExistingDbModel.UserLogin" Width="1.5" PointX="5.25" PointY="3.75" />
+        <AssociationConnector Association="IdentityExistingDbModel.FK_dbo_UserClaim_dbo_User_UserId" />
+        <AssociationConnector Association="IdentityExistingDbModel.FK_dbo_UserLogin_dbo_User_UserId" />
+        <AssociationConnector Association="IdentityExistingDbModel.UserRole" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
