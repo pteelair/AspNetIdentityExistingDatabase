@@ -60,17 +60,7 @@ namespace ExistingDbFormsAuth.Controllers
         {
             get
             {
-                //return _userManager ?? HttpContext.GetOwinContext().GetUserManager<ApplicationUserManager>();
-                if (_userManager == null)
-                {
-                    var userManager = HttpContext.GetOwinContext().GetUserManager<ApplicationUserManager>();
-                    userManager.PasswordHasher = new MyPasswordHasher();
-                    return userManager;
-                }
-                else
-                {
-                    return _userManager;
-                }
+                return _userManager ?? HttpContext.GetOwinContext().GetUserManager<ApplicationUserManager>();                
             }
             private set
             {
