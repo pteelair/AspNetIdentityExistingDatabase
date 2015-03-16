@@ -54,13 +54,5 @@ namespace ExistingDbFormsAuth.Models
             //return base.VerifyHashedPassword(hashedPassword, providedPassword);
             return hashedPassword.Equals(HashPassword(providedPassword)) ? PasswordVerificationResult.Success : PasswordVerificationResult.Failed;
         }
-    }
-
-    public class UserManager : UserManager<MyUser>
-    {
-        public UserManager() : base(new UserStore<MyUser>(new ApplicationDbContext()))
-        {
-            this.PasswordHasher = new MyPasswordHasher();
-        }
-    }
+    }    
 }
